@@ -1,5 +1,7 @@
 @use "../../node_modules/normalize.css/normalize";
 
-@use "common/index";
+@use "common";
 
 @use "pages/home/header";
+
+@use "pages/home/main/experiense";

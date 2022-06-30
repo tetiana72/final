@@ -1,3 +1,6 @@
+@use "../presets" as *;
+@use "mixins-media" as *;
+
 @mixin abs-position($t: 0, $r: 0, $b: 0, $l: 0) {
   position: absolute;
   top: $t;
@@ -11,4 +14,21 @@
   padding: 0;
 
   list-style: none;
+}
+
+@mixin dot {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $color-gray-separator;
+    margin-right: 10px;
+    margin-bottom: 2px;
+
+    @include lg {
+      display: none;
+    }
+  }
 }

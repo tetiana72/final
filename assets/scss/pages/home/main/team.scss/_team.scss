@@ -1,0 +1,126 @@
+@use "../../../../presets/index" as *;
+@use "../../../../mixins/index" as *;
+
+.team {
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  &__container {
+    @extend %container;
+  }
+}
+.team-item {
+  background-color: $color-gray-bg;
+  border-radius: 12px 12px 12px 12px;
+  display: grid;
+  padding-left: 20px;
+  margin-bottom: $gap;
+
+  @include lg-min {
+    grid-template-areas: "photo rep" "photo ptr";
+    gap: 40px;
+  }
+  @include lg {
+    grid-template-areas: "rep rep" "photo photo" "ptr ptr";
+    gap: $gap;
+  }
+  @include sm {
+    grid-template-areas: "rep rep" "photo ptr";
+    gap: 5px;
+  }
+
+  &__photo {
+    grid-area: photo;
+  }
+  &__image {
+    @include lg {
+      width: 200px;
+    }
+    @include sm {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+    }
+  }
+
+  &__representation {
+    grid-area: rep;
+    padding-top: 40px;
+    padding-right: 9px;
+
+    &-link {
+      color: $color-active;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+    &-descriptin {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 50px;
+      @extend %text-liner-gradient;
+      padding-bottom: $gap;
+
+      @include sm {
+        font-size: 30px;
+        line-height: 32px;
+      }
+    }
+
+    &-partner {
+      padding-top: 5px;
+      padding-bottom: 10px;
+      grid-area: ptr;
+
+      @include sm {
+
+    
+      }
+    
+
+      &-name {
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-gray-text;
+
+        @include sm-min {
+          padding-bottom: 5px;
+        }
+
+        @include sm {
+          font-size: 11px;
+        }
+      }
+
+      &-position {
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-gray-text;
+
+        @include sm {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  &__indicator {
+    width: 16px;
+    height: 16px;
+    opacity: 0.2;
+    border-radius: 8px;
+    background-color: $color-active;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

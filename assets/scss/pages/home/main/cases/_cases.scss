@@ -1,0 +1,64 @@
+@use "../../../../presets/index" as *;
+@use "../../../../mixins/index" as *;
+
+.cases {
+   &__contanier {
+    @extend %container;
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__row-top {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-gray-bg;
+
+    &-title {
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-accent;
+      padding: $gap;
+      border-bottom: 2px solid $color-white;
+    }
+  }
+  &-item {
+    background-color: $color-gray-bg;
+
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+      padding: 25px;
+    gap: $gap;
+
+    &__description {
+      font-size: 24px;
+      color: $color-primary-soft;
+      font-weight: 500;
+    }
+    &__link {
+      font-size: 18px;
+      color: $color-gray-text;
+    }
+  }
+
+&__row-bottom {
+
+   display: grid;
+    gap: 2px;
+    border-top: 2px solid $color-white;
+    grid-template-columns: 25% 35% 1fr;
+}
+ }

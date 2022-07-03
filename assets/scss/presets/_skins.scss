@@ -7,6 +7,9 @@ $color-active: #24a3ff;
 $color-active-alt: #0085ff;
 $color-active-soft: #006ccf;
 
+$color-shadow-bg: #cacadb;
+$color-shadow-light-bg: #e7e7f2;
+
 $color-gray-bg: #f5f5fa;
 $color-gray-bg-alt: #ededf7;
 $color-gray-text: #b3b3ba;
@@ -16,5 +19,5 @@ $color-white: #ffffff;
 $color-black: #000000;
 
 $bg-gradient1: 42deg, $color-primary 15%, $color-primary 50%, #7a425e 88%;
-$bg-gradient2: 220deg, $color-primary 12%, $color-primary 57%, #643E72 87%;
+$bg-gradient2: 190deg, $color-primary 12%, $color-primary 57%, #643e72 87%;
 $text-gradient: 90deg, #ef8080 35%, $color-accent 100%;

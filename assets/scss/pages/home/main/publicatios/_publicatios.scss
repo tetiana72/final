@@ -1,0 +1,141 @@
+@use "../../../../presets/index" as *;
+@use "../../../../mixins/index" as *;
+
+.publicatios {
+  background-color: $color-gray-bg;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  position: relative;
+
+  @include md-min {
+    max-height: 872px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 160px;
+      width: 100%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        180deg,
+        rgba(245, 245, 250, 0) 0%,
+        $color-gray-bg 86.5%
+      );
+    }
+  }
+
+  @include md {
+    padding-top: $gap;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__page-link {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+  }
+  &__title {
+    @extend %text-liner-gradient2;
+    font-size: 42px;
+    padding-top: 10px;
+
+    @include lg {
+      font-size: 32px;
+    }
+  }
+
+  &__news {
+    padding-top: 40px;
+    gap: 40px;
+
+    @include lg-min {
+      columns: 3 auto;
+    }
+    @include lg-md {
+      columns: 2 auto;
+    }
+    @include md {
+      padding-top: $gap;
+      columns: 1 auto;
+      gap: $gap;
+    }
+  }
+  &__btn {
+    background-color: $color-active;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    min-width: 250px;
+    min-height: 50px;
+    padding: 3px;
+    color: $color-white;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgb(36 163 255 / 50%);
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    z-index: 2;
+    transform: translateX(-50%);
+
+    @include md {
+      bottom: 40px;
+    }
+  }
+}
+
+.news-content {
+  background-color: $color-white;
+  margin-bottom: 40px;
+  border-radius: 8px;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 20px 20px 10px 20px;
+    color: $color-active;
+  }
+
+  &__data {
+    position: relative;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-gray-separator;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    @include md-min {
+      border-bottom: 4px solid $color-gray-separator;
+    }
+  }
+  &__description {
+    padding: 20px;
+    line-height: 138%;
+    padding-top: 20px;
+
+    @include md {
+      display: none;
+    }
+  }
+}
+.content-invisible {
+  @include md {
+    display: none;
+  }
+}

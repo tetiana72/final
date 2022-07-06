@@ -2,7 +2,7 @@
 @use "../../../../mixins/index" as *;
 
 .cases {
-   &__contanier {
+  &__contanier {
     @extend %container;
   }
 
@@ -16,14 +16,30 @@
   &__row-top {
     display: grid;
     gap: 2px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include lg {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      text-align: left;
+    }
   }
-  &__content {
+
+  .content {
     display: flex;
     flex-direction: column;
     background-color: $color-gray-bg;
 
-    &-title {
+    @include lg {
+      grid-column-end: 3;
+      grid-column-start: 1;
+    }
+
+    &__title {
       font-size: 14px;
       line-height: 17px;
       letter-spacing: 1px;
@@ -32,21 +48,65 @@
       padding: $gap;
       border-bottom: 2px solid $color-white;
     }
-  }
-  &-item {
-    background-color: $color-gray-bg;
 
-    min-height: 200px;
+    &-item {
+      background-color: $color-gray-bg;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 25px;
+      gap: $gap;
+
+      @include lg-min {
+        min-height: 200px;
+      }
+
+      @include sm {
+        padding: $gap;
+      }
+
+      &__description {
+        font-size: 24px;
+        line-height: 28px;
+        color: $color-primary-soft;
+        font-weight: 500;
+
+        @include sm {
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 18px;
+      color: $color-gray-text;
+    }
+  }
+
+  .cases-item {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-      padding: 25px;
-    gap: $gap;
+    padding: 20px;
+    background-color: $color-gray-bg;
+    gap: 20px;
+
+    @include lg {
+      grid-column-end: 3;
+      grid-column-start: 1;
+    }
 
     &__description {
       font-size: 24px;
+      line-height: 28px;
       color: $color-primary-soft;
       font-weight: 500;
+
+      @include sm {
+        font-size: 18px;
+        line-height: 21px;
+      }
     }
     &__link {
       font-size: 18px;
@@ -54,11 +114,20 @@
     }
   }
 
-&__row-bottom {
-
-   display: grid;
+  &__row-bottom {
+    display: grid;
     gap: 2px;
     border-top: 2px solid $color-white;
     grid-template-columns: 25% 35% 1fr;
+
+    @include lg {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      text-align: left;
+    }
+  }
 }
- }

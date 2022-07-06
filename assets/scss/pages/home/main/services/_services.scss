@@ -1,115 +1,8 @@
-/*@use "../../../../presets" as *;
-@use "../../../../mixins" as *;
-
-.services {
-  position: relative;
-  border-radius: 0px 0px 12px 12px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  &::before {
-    content: "";
-    border-radius: 0px 0px 12px 12px;
-    background-color: $color-shadow-bg;
-    position: absolute;
-    top: 100%;
-    left: 20px;
-    right: 20px;
-    height: 10px;
-    z-index: 1;
-  }
-
-  &::after {
-    content: "";
-    border-radius: 0px 0px 12px 12px;
-    background-color: $color-shadow-light-bg;
-    position: absolute;
-    top: 100%;
-    left: 40px;
-    right: 40px;
-    height: 20px;
-  }
-
-  &__container {
-    @extend %container;
-  }
-
-  &__page-link {
-    position: relative;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    opacity: 0.5;
-    color: $color-white;
-  }
-
-  &__grid {
-    display: grid;
-    gap: 40px;
-
-    @include xl-min {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @include xl {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include md {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  &__title {
-    @extend %text-liner-gradient;
-    margin-bottom: 60px;
-    font-size: 42px;
-  }
-}
-
-.service-item {
-  /*display: flex;
-  flex-direction: column;
-  gap: $gap;*/
-/*
-  display: grid;
-  grid-template-columns: auto 1fr 1fr;
-
-  @include md {
-  }
-
-  &__icon {
-    grid-area: icon;
-
-    @include sm-min {
-      width: 92px;
-      height: 92px;
-    }
-    @include sm {
-      width: 65px;
-      height: 65px;
-    }
-  }
-
-  &__title {
-    grid-area: ttl;
-    font-size: 24px;
-    line-height: 28px;
-    color: $color-active;
-    font-weight: 400;
-  }
-
-  &__descriptin {
-    grid-area: dsc;
-    font-size: 18px;
-    line-height: 144%;
-    color: $color-white;
-  }
-}*/
 @use "../../../../presets/index" as *;
 @use "../../../../mixins/index" as *;
 
 .services {
   position: relative;
-
   border-radius: 0 0 12px 12px;
   background: linear-gradient($bg-gradient2);
 
@@ -124,29 +17,23 @@
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: 100%;
     right: 20px;
     left: 20px;
-
     height: 20px;
-
-    content: "";
-
     border-radius: 0 0 12px 12px;
     background-color: $color-gray-separator;
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 100%;
     right: 10px;
     left: 10px;
-
     height: 10px;
-
-    content: "";
-
     border-radius: 0 0 12px 12px;
     background-color: $color-gray-text;
   }
@@ -158,56 +45,60 @@
   &__page-link {
     letter-spacing: 1px;
     text-transform: uppercase;
-
     color: rgba($color-white, 0.5);
-
     font-size: 14px;
+  }
+
+  &__page-img {
+    margin-left: 3px;
   }
 
   &__grid {
     display: grid;
-
     gap: 40px;
-    @include lg-min {
+
+    @include xl-min {
       grid-template-columns: repeat(3, 1fr);
     }
-    @include lg-sm {
+    @include xl-md {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   &__title {
+    padding-top: 10px;
     @extend %text-liner-gradient;
+
     @include md-min {
       width: max-content;
     }
     @include sm-min {
       margin-bottom: 60px;
-
       font-size: 42px;
     }
     @include sm {
       margin-bottom: 40px;
-
       font-size: 32px;
     }
   }
 }
 
 .service-item {
-  display: flex;
-  flex-direction: column;
-  gap: $gap;
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  grid-template-rows: auto auto 1fr;
 
-  @include lg {
+  @include xl {
+    grid-template-columns: auto 1fr;
   }
 
   &__image {
-    @include sm-min {
+    @include md-min {
       width: 92px;
       height: 92px;
     }
-    @include sm {
+    @include md {
       width: 65px;
       height: 65px;
     }
@@ -215,27 +106,30 @@
 
   &__title {
     color: $color-active;
-
     font-weight: 500;
 
     @include sm-min {
       font-size: 24px;
+      line-height: 26px;
     }
     @include sm {
       font-size: 18px;
+      line-height: 21px;
     }
   }
 
   &__descriptin {
     color: $color-white;
-
     line-height: 1.44;
 
     @include sm-min {
       font-size: 18px;
     }
-    @include lg {
+    @include xl {
       grid-column: 1 / span 3;
+    }
+    @include md {
+      line-height: 22px;
     }
   }
 }

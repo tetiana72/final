@@ -3,12 +3,17 @@
 
 .team {
   padding-top: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+
+  @include sm {
+    padding-top: 40px;
+  }
 
   &__container {
     @extend %container;
   }
 }
+
 .team-item {
   background-color: $color-gray-bg;
   border-radius: 12px 12px 12px 12px;
@@ -34,75 +39,7 @@
   }
   &__image {
     @include lg {
-      width: 200px;
-    }
-    @include sm {
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-    }
-  }
-
-  &__representation {
-    grid-area: rep;
-    padding-top: 40px;
-    padding-right: 9px;
-
-    &-link {
-      color: $color-active;
-      font-size: 14px;
-      line-height: 17px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding-bottom: 10px;
-    }
-    &-descriptin {
-      font-weight: 700;
-      font-size: 42px;
-      line-height: 50px;
-      @extend %text-liner-gradient;
-      padding-bottom: $gap;
-
-      @include sm {
-        font-size: 30px;
-        line-height: 32px;
-      }
-    }
-
-    &-partner {
-      padding-top: 5px;
-      padding-bottom: 10px;
-      grid-area: ptr;
-
-      @include sm {
-
-    
-      }
-    
-
-      &-name {
-        font-size: 18px;
-        line-height: 21px;
-        color: $color-gray-text;
-
-        @include sm-min {
-          padding-bottom: 5px;
-        }
-
-        @include sm {
-          font-size: 11px;
-        }
-      }
-
-      &-position {
-        font-size: 16px;
-        line-height: 22px;
-        color: $color-gray-text;
-
-        @include sm {
-          font-size: 10px;
-        }
-      }
+      display: none;
     }
   }
 
@@ -121,6 +58,83 @@
 
     &.active {
       opacity: 1;
+    }
+  }
+}
+
+.representation {
+  grid-area: rep;
+  padding-top: 40px;
+  padding-right: 9px;
+
+  &__link {
+    color: $color-active;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  &__img {
+    margin-left: 5px;
+  }
+
+  &__descriptin {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    @extend %text-liner-gradient2;
+    padding-bottom: $gap;
+
+    @include sm {
+      font-size: 30px;
+      line-height: 32px;
+    }
+  }
+
+  &-partner {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    grid-area: ptr;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &__photo {
+      border-radius: 25px;
+
+      @include lg-min {
+        display: none;
+      }
+    }
+  }
+  &-person {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    &__name {
+      font-size: 18px;
+      line-height: 21px;
+      color: $color-gray-text;
+
+      @include sm-min {
+        padding-bottom: 10px;
+      }
+
+      @include sm {
+        font-size: 11px;
+      }
+    }
+
+    &__position {
+      font-size: 16px;
+      line-height: 22px;
+      color: $color-gray-text;
+
+      @include sm {
+        font-size: 10px;
+      }
     }
   }
 }

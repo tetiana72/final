@@ -130,8 +130,9 @@
 
       <section class="services">
         <div class="services__container">
-          <div>
-            <strong><a class="services__page-link" href="">послуги</a></strong>
+          <div class="services__page">
+            <strong><a class="services__page-link" href="">послуги <img class="services__page-img"
+                  src="assets/img/arrow1.png" alt=""></a></strong>
           </div>
           <h2 class="services__title">Що ми вміємо робити краще за інших?</h2>
 
@@ -222,24 +223,27 @@
             <img class="team-item__image" src="assets/img/photo-team.jpg" alt="">
           </div>
 
-          <div class="team-item__representation">
+          <div class="team-item__representation representation">
 
             <div>
-              <strong><a class="team-item__representation-link" href="">команда<img src="assets/img/arrow.png"
-                    alt=""></a></strong>
+              <strong><a class="representation__link" href="">команда<img
+                    class="representation__img" src="assets/img/arrow.png" alt=""></a></strong>
             </div>
 
-            <div class="team-item__representation-descriptin">Ми звикли брати на себе відповідальність та завжди
+            <div class="representation__descriptin">Ми звикли брати на себе відповідальність та завжди
               гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</div>
 
 
-            <div class="team-item__representation-partner">
-              <div class="team-item__representation-partner-name">Олександр Олександровський</div>
-              <div class="team-item__representation-partner-position">Керуючий партнер</div>
+            <div class="representation-partner">
+              <img class="representation-partner__photo"src="assets/img/photo-team2.jpg" alt="">
+
+              <div class="representation-person">
+              <div class="representation-person__name">Олександр Олександровський</div>
+              <div class="representation-person__position">Керуючий партнер</div>
             </div>
           </div>
+          </div>
         </div>
-
 
         <div class="team-item__indicators">
           <div class="team-item__indicator active"></div>
@@ -256,14 +260,14 @@
 
           <div class="cases__row-top">
 
-            <div class="cases__content">
-              <h3 class="cases__content-title">Успішні кейси</h3>
+            <div class="cases__content content">
+              <h3 class="content__title">Успішні кейси</h3>
 
-              <div class="cases-item">
-                <div class="cases-item__description">Супровід проекту з купівлі-продажу сільськогосподарської
+              <div class="content-item ">
+                <div class="content-item__description">Супровід проекту з купівлі-продажу сільськогосподарської
                   продукції
                 </div>
-                <div><a class="cases-item__link" href="">Hillel IT School</a></div>
+                <div><a class="content__link" href="">Hillel IT School</a></div>
               </div>
             </div>
 
@@ -349,10 +353,102 @@
         </a>
       </div>
     </section>
-    <!-- <section class="publicatios"></section>-->
+
+    <section class="publicatios">
+      <div class="publicatios__container">
+
+        <div>
+          <strong><a class="publicatios__page-link" href="">публікації<img class="publicatios__page-img"
+                src="assets/img/arrow.png" alt=""></a></strong>
+        </div>
+        <h2 class="publicatios__title">Нам є що розповісти</h2>
+
+        <div class="publicatios__news">
+
+          <article class="news-content news-content-hide">
+            <h4 class="news-content__title">Валютний контроль помер, хай живе валютний контроль!</h4>
+            <div class="news-content__data">14 червня</div>
+            <div class="news-content__description">Експерти проводять конференції, круглі столи та іншого штибу заходи
+              на тему
+              «лібералізація валютного законодавства». Юристи-експерти-новелісти стирають пальці об «ctrl+c/ctrl+v».
+            </div>
+          </article>
+
+          <article class="news-content">
+            <div><img class="news-content__image" src="assets/img/foto3.jpg" alt=""></div>
+            <h4 class="news-content__title">Equity associate</h4>
+            <div class="news-content__data">22 квітня</div>
+            <div class="news-content__description">На проектах я джун. При цьому я співвласник юридичної фірми. Як це
+              відбулося. Перед вступом батьки мені казали, що якщо буду…
+            </div>
+          </article>
+
+          <article class="news-content">
+            <div><img class="news-content__image" src="assets/img/foto.jpg" alt=""></div>
+            <h4 class="news-content__title">Штраф для «Корпорації добра»: що буде з Google та іншими за порушення GDPR
+            </h4>
+            <div class="news-content__data">29 вересня</div>
+            <div class="news-content__description">І чому стягнення у 50 млн євро може стати доленосним прецедентом За
+              матеріалами Mind.ua 21 січня Національна комісія із захисту даних.
+            </div>
+          </article>
+
+          <article class="news-content content-invisible">
+            <div><img class="news-content__image" src="assets/img/foto4.jpg" alt=""></div>
+            <h4 class="news-content__title">Заповіт міленіала</h4>
+            <div class="news-content__data">19 серпня</div>
+            <div class="news-content__description">Що і як передаватимуть у спадщину сучасні влогери, опініон лідери і
+              криптомільйонери Типовий спадок українського покоління Х виглядає так: квартира у…
+            </div>
+          </article>
+
+          <article class="news-content  content-invisible">
+            <div><img class="news-content__image" src="assets/img/foto2.jpg" alt=""></div>
+            <h4 class="news-content__title">«Корпорації добра» заповіт міленіала Штраф для «Корпорації добра»:</h4>
+            <div class="news-content__data">19 серпня</div>
+            <div class="news-content__description">Що і як передаватимуть у спадщину сучасні влогери, опініон лідери і
+              криптомільйонери Типовий спадок українського покоління Х виглядає так: квартира у…
+            </div>
+          </article>
+
+          <article class="news-content content-invisible">
+            <div><img class="news-content__image" src="assets/img/foto5.jpg" alt=""></div>
+            <h4 class="news-content__title">GDPR аповіт міленіала та іншими за порушення </h4>
+            <div class="news-content__data">19 серпня</div>
+            <div class="news-content__description">Що і як передаватимуть у спадщину сучасні влогери, опініон лідери і
+              криптомільйонери Типовий спадок українського покоління Х виглядає так: квартира у…
+            </div>
+          </article>
+          <button class="publicatios__btn" type="button">Ще публікації</button>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+
+      <div class="footer__nav">
+
+
+        <div class="footer__location">
+          <div class="footer__location-address">Одеса, Адміральський пр., 3</div>
+          <a class="footer__location-link" href="">Подивитися на мапі</a>
+        </div>
+
+        <div class="footer__connect">
+          <a href="">
+            <img class="footer__connect-social" src="assets/img/facebook-activ.png" alt="facebook">
+          </a>
+          <a class="footer__connect-phone" href="tel:+380503901591">+38 (050) 390 15 91</a>
+          <a class="footer__connect-email" href="">contact@hlegals.net</a>
+        </div>
+
+        <div class="footer__nav-copyright">© 2021 ТОВ Юридична компанія «HLEGALS»</div>
+
+      </div>
+    </div>
+  </footer>
 
 </body>
 

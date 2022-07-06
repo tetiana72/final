@@ -1,0 +1,86 @@
+@use "../../../presets/index" as *;
+@use "../../../mixins/index" as *;
+
+.page-footer {
+  background-color: $color-gray-bg;
+  padding-bottom: 40px;
+
+  @include lg {
+    padding-bottom: 115px;
+  }
+
+  &__container {
+    @extend %container;
+  }
+}
+
+.footer__nav {
+  display: grid;
+  row-gap: 30px;
+  grid-template-areas: "loc copy" "con copy";
+  padding-top: 35px;
+  border-top: 4px solid $color-gray-separator;
+
+  @include lg {
+    grid-template-areas: "loc" "con" "copy";
+    row-gap: $gap;
+    padding-top: 25px;
+  }
+
+  &-copyright {
+    grid-area: copy;
+    display: flex;
+    justify-content: flex-end;
+    color: $color-gray-text;
+    line-height: 19px;
+
+    @include lg {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+.footer__location {
+  grid-area: loc;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+
+  @include lg {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-address {
+    font-weight: 500;
+    white-space: nowrap;
+    color: $color-primary-soft;
+  }
+  &-link {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+  }
+}
+
+.footer__connect {
+  grid-area: con;
+  display: flex;
+  align-items: center;
+  gap: $gap;
+
+  @include lg {
+    flex-direction: column;
+  }
+  &-phone {
+    font-weight: 700;
+    color: $color-primary-alt;
+  }
+  &-email {
+    font-weight: 700;
+    color: $color-active;
+  }
+}

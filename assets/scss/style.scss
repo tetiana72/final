@@ -2,19 +2,18 @@
 
 @use "common";
 
-@use "pages/home/header";
+@use "pages-home/header";
 
-@use "pages/home/main/experiense";
+@use "pages-home/main/cases";
 
-@use "pages/home/main/services/services";
+@use "pages-home/main/clients/clients";
 
-@use "pages/home/main/team.scss/team";
+@use "pages-home/main/experiense";
 
-@use "pages/home/main/cases/cases";
+@use "pages-home/main/publicatios";
 
-@use "pages/home/main/clients/clients";
+@use "pages-home/main/services";
 
-@use "pages/home/main/publicatios/publicatios";
+@use "pages-home/main/team";
 
-@use "pages/home/footer/footer";
-
+@use "pages-home/footer/footer";

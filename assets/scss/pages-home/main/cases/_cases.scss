@@ -1,0 +1,48 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.cases {
+  &__contanier {
+    @extend %container;
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__row-top {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include lg {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      text-align: left;
+    }
+  }
+
+  &__row-bottom {
+    display: grid;
+    gap: 2px;
+    border-top: 2px solid $color-white;
+    grid-template-columns: 25% 35% 1fr;
+
+    @include lg {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      text-align: left;
+    }
+  }
+}

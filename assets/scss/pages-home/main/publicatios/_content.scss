@@ -1,0 +1,50 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.news-content {
+  background-color: $color-white;
+  margin-bottom: 40px;
+  border-radius: 8px;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 20px 20px 10px 20px;
+    color: $color-active;
+  }
+
+  &__data {
+    position: relative;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-gray-separator;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    @include md-min {
+      border-bottom: 4px solid $color-gray-separator;
+    }
+  }
+  &__description {
+    padding: 20px;
+    line-height: 138%;
+    padding-top: 20px;
+
+    @include md {
+      display: none;
+    }
+  }
+}
+.content-invisible {
+  @include md {
+    display: none;
+  }
+}

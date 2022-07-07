@@ -1,5 +1,5 @@
-@use "../../../../presets/index" as *;
-@use "../../../../mixins/index" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .team {
   padding-top: 60px;
@@ -60,57 +60,9 @@
       opacity: 1;
     }
   }
-}
 
-.representation {
-  grid-area: rep;
-  padding-top: 40px;
-  padding-right: 9px;
-
-  &__link {
-    color: $color-active;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-  }
-  &__img {
-    margin-left: 5px;
-  }
-
-  &__descriptin {
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 50px;
-    @extend %text-liner-gradient2;
-    padding-bottom: $gap;
-
-    @include sm {
-      font-size: 30px;
-      line-height: 32px;
-    }
-  }
-
-  &-partner {
-    padding-top: 5px;
-    padding-bottom: 10px;
-    grid-area: ptr;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-
-    &__photo {
-      border-radius: 25px;
-
-      @include lg-min {
-        display: none;
-      }
-    }
-  }
   &-person {
     display: flex;
-    gap: 10px;
     flex-direction: column;
 
     &__name {
@@ -129,7 +81,6 @@
 
     &__position {
       font-size: 16px;
-      line-height: 22px;
       color: $color-gray-text;
 
       @include sm {

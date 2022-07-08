@@ -16,6 +16,23 @@
   list-style: none;
 }
 
+@mixin dot-foot {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $color-gray-text;
+    margin-right: 10px;
+    margin-bottom: 2px;
+
+    @include lg {
+      display: none;
+    }
+  }
+}
+
 @mixin dot {
   &::before {
     content: "";

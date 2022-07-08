@@ -19,6 +19,7 @@
     content: "";
     @include abs-position(70%);
     z-index: 1;
+    
     background: linear-gradient(to top, $color-primary 0%, transparent 100%);
   }
 

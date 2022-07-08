@@ -2,6 +2,7 @@
 @use "../../../mixins" as *;
 
 .cases {
+  background-color: $color-white;
   &__contanier {
     @extend %container;
   }

@@ -47,4 +47,37 @@
       }
     }
   }
+  &-person {
+    color: $color-gray-text;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    grid-area: ptr;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+
+    &__name {
+      font-size: 18px;
+      line-height: 21px;
+      color: $color-gray-text;
+
+      @include sm-min {
+        padding-bottom: 5px;
+      }
+
+      @include sm {
+        font-size: 11px;
+      }
+    }
+
+    &__position {
+      font-size: 16px;
+      color: $color-gray-text;
+
+      @include sm {
+        font-size: 10px;
+      }
+    }
+  }
 }

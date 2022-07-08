@@ -58,11 +58,14 @@
     color: $color-primary-soft;
   }
   &-link {
+    position: relative;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $color-active;
+
+   @include dot-foot;
   }
 }
 
@@ -76,11 +79,17 @@
     flex-direction: column;
   }
   &-phone {
+    position: relative;
     font-weight: 700;
     color: $color-primary-alt;
+
+    @include dot-foot;
   }
   &-email {
+    position: relative;
     font-weight: 700;
     color: $color-active;
+
+    @include dot-foot;
   }
 }

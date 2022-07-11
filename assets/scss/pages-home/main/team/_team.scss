@@ -2,8 +2,7 @@
 @use "../../../mixins" as *;
 
 .team {
-  background-color: $color-white;
-  padding-top: 60px;
+   padding-top: 60px;
   padding-bottom: 60px;
 
   @include sm {

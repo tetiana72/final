@@ -1,7 +1,7 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.cases-item {
+.cases__item {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -9,12 +9,19 @@
   background-color: $color-gray-bg;
   gap: 20px;
 
-  @include lg {
-    grid-column-end: 3;
-    grid-column-start: 1;
+  @include xl-md {
+    min-height: 200px;
   }
-
-  &__description {
+  @include lg {
+    justify-content: center;
+  }
+  &:nth-child(1) {
+    @include lg-md {
+      grid-column-end: 3;
+      grid-column-start: 1;
+    }
+  }
+  &-description {
     font-size: 24px;
     line-height: 28px;
     color: $color-primary-soft;
@@ -25,7 +32,7 @@
       line-height: 21px;
     }
   }
-  &__link {
+  &-link {
     font-size: 18px;
     color: $color-gray-text;
   }

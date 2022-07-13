@@ -40,6 +40,7 @@
     position: relative;
 
     @include lg-min {
+      line-height: 50px;
       text-align: right;
       font-size: 42px;
     }
@@ -98,6 +99,7 @@
 
     @include lg-min {
       font-size: 32px;
+      line-height: 38px;
       padding-right: 40px;
     }
     @include lg {

@@ -71,11 +71,7 @@
     align-items: flex-end;
     overflow: hidden;
     z-index: 1;
-
-    &-image {
-      padding-bottom: $gap;
-    }
-
+   
     &-title {
       position: absolute;
       top: 50%;

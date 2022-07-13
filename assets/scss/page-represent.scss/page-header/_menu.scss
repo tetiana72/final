@@ -1,9 +1,7 @@
-@use "../../presets" as *;
 @use "../../mixins" as *;
+@use "../../presets" as *;
 
 .menu {
-  align-self: center;
-  font-size: 18px;
 
   &__btn {
     position: relative;
@@ -67,39 +65,21 @@
       }
     }
   }
-  &__list {
-    @include unlist;
-    @include sm-min {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-
-      gap: 15px;
-    }
-    @include md {
-      position: absolute;
-      top: 0;
-      right: -$mobile-menu-size;
-
-      display: none;
-
-      width: $mobile-menu-size;
-      height: 100vh;
-      padding: $gap;
-
-      background-color: $color-primary;
-      box-shadow: -5px 0 5px rgba($color-black, 0.5);
-
-      &.active {
-        display: block;
-      }
-    }
-  }
-  &__link {
+  &__link2 {
     display: block;
 
+    font-size: 18px;
+    text-align: right;
+    color: $color-active;
+
+    
     @include md {
       margin: $gap 0;
+    }
+
+    &.active {
+      color: $color-accent;
+      border-bottom: 1px solid $color-accent;
     }
   }
 }

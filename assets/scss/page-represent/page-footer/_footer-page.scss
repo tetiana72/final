@@ -1,0 +1,26 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+
+.footer {
+  background-color: $color-gray-bg-foot;
+  padding-bottom: 40px;
+
+  &__container {
+    @extend %container;
+  }
+  
+
+  &__navigation {
+    display: grid;
+  row-gap: 30px;
+  grid-template-areas: "loc copy" "con copy";
+  padding-top: 35px;
+
+  @include lg {
+    grid-template-areas: "loc" "con" "copy";
+    row-gap: $gap;
+    padding-top: 25px;
+  }
+  }
+}

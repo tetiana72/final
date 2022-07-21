@@ -45,7 +45,7 @@
   grid-area: loc;
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 30px;
 
   @include lg {
     flex-direction: column;

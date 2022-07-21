@@ -1,0 +1,44 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.header {
+    background-color: $color-white;
+
+  &__grid {
+ 
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+    gap: $gap;
+    @extend %container;
+    padding-top: 50px;
+    z-index: 2;
+
+    @include lg-min {
+      grid-template-areas: "logo act" "logo menu";
+    }
+    @include lg {
+      grid-template-areas: "act act" "logo menu";
+      padding-top: $gap;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    &-image {
+      @include sm {
+          width: 220px;
+      }
+      
+          }
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: act;
+  }
+}

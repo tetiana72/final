@@ -1,19 +1,19 @@
-@use "../../mixins" as *;
 @use "../../presets" as *;
+@use "../../mixins" as *;
 
 .action {
   display: flex;
   gap: $gap;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: nowrap;
+ a {
+      color: $color-gray-text;
+    }
 
-  @include xl {
+  @include lg {
     justify-content: space-between;
-  }
-
-  a {
-    color: $color-gray-text;
-  }
+    }
 
   &__languages {
     font-weight: 700;
@@ -30,39 +30,41 @@
 
     &.active {
       background-color: $color-accent;
-      color: $color-white;
-    }
+             color: $color-white;
+        }
   }
 
   &__locations {
-    @include dot;
-
-    @include md {
+    @include dot-foot;
+  
+    @include xl {
       display: none;
-      
     }
   }
+
   &__phone-link {
     font-weight: 700;
     white-space: nowrap;
-    @include dot;
+    @include dot-foot;
   }
 
   &__socials {
-    &::before {
+       &::before {
       content: "";
       display: inline-block;
       width: 6px;
       height: 6px;
       border-radius: 3px;
-      background-color: $color-gray-separator;
-      margin-right: 10px;
-      margin-bottom: 6px;
+      background-color: $color-gray-text;
+        margin-right: 10px;
+      margin-bottom: 8px;
+
+      @include lg {
+        display: none;
+      }
     }
+
     @include lg {
-      display: none;
-    }
-    @include md {
       display: none;
     }
   }

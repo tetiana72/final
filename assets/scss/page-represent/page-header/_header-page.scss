@@ -2,10 +2,9 @@
 @use "../../presets" as *;
 
 .header {
-    background-color: $color-white;
+  background-color: $color-white;
 
   &__grid {
- 
     display: grid;
 
     grid-template-columns: auto 1fr;
@@ -28,10 +27,9 @@
 
     &-image {
       @include sm {
-          width: 220px;
+        width: 220px;
       }
-      
-          }
+    }
   }
 
   &__menu {

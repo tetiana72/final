@@ -7,13 +7,13 @@
   justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
- a {
-      color: $color-gray-text;
-    }
+  a {
+    color: $color-gray-text;
+  }
 
   @include lg {
     justify-content: space-between;
-    }
+  }
 
   &__languages {
     font-weight: 700;
@@ -30,13 +30,13 @@
 
     &.active {
       background-color: $color-accent;
-             color: $color-white;
-        }
+      color: $color-white;
+    }
   }
 
   &__locations {
     @include dot-foot;
-  
+
     @include xl {
       display: none;
     }
@@ -49,14 +49,14 @@
   }
 
   &__socials {
-       &::before {
+    &::before {
       content: "";
       display: inline-block;
       width: 6px;
       height: 6px;
       border-radius: 3px;
       background-color: $color-gray-text;
-        margin-right: 10px;
+      margin-right: 10px;
       margin-bottom: 8px;
 
       @include lg {
